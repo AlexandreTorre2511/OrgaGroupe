@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dossier commercial syndics</title>
+<meta name="description" content="Dossier commercial syndics ETHEREA Services et Dépannage 06 : offres, références, argumentaire, plan d'action.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Mise en page : bandeau titre, sommaire collant à gauche sur grand écran, contenu en colonne de lecture. */
+:root{
+  --bg:#f3f6f5; --surface:#ffffff; --ink:#10201d; --muted:#5b6b67; --line:#dbe3e0; --soft:#eaf1ef;
+  --etherea:#0f7a68; --d06:#d9532c; --accent:#0f7a68;
+  --f-display:"Sora","Segoe UI",system-ui,sans-serif; --f-body:"Manrope","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0c1413; --surface:#13201e; --ink:#e7f0ee; --muted:#93a6a1; --line:#21312e; --soft:#182825;
+  --etherea:#3cc4ab; --d06:#ff8058; --accent:#3cc4ab; color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.hero{background:var(--ink);color:var(--bg);padding:48px max(20px,env(safe-area-inset-left)) 40px}
+.hero-in{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.brands{display:flex;gap:8px;flex-wrap:wrap}
+.brand{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid currentColor}
+.brand.e{color:#5fd3bd}.brand.d{color:#ff9a78}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(28px,5vw,44px);line-height:1.1;margin:0;max-width:20ch;text-wrap:balance}
+.byline{opacity:.75;font-size:14px}
+.layout{max-width:1100px;margin:0 auto;padding:32px max(20px,env(safe-area-inset-left)) 80px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px}
+nav.toc{position:sticky;top:20px;align-self:start}
+nav.toc p{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 8px}
+nav.toc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;counter-reset:s}
+nav.toc a{display:block;padding:6px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:14px;font-weight:600}
+nav.toc a:hover{background:var(--soft);color:var(--ink)}
+@media (max-width:860px){.layout{grid-template-columns:minmax(0,1fr);gap:24px}nav.toc{position:static}nav.toc ol{flex-direction:row;flex-wrap:wrap}nav.toc a{background:var(--surface);border:1px solid var(--line)}}
+main{min-width:0;max-width:760px}
+main h2{font-family:var(--f-display);font-weight:700;font-size:26px;line-height:1.2;margin:56px 0 14px;padding-top:4px;text-wrap:balance}
+main h2:first-child{margin-top:0}
+main h3{font-family:var(--f-display);font-weight:500;font-size:19px;margin:32px 0 10px}
+main p{margin:0 0 14px}
+main strong{font-weight:700}
+main ul,main ol{padding-left:22px;margin:0 0 16px}
+main li{margin:4px 0}
+main li.task{list-style:none;margin-left:-22px;display:flex;gap:10px;align-items:flex-start}
+main li.task input{margin-top:5px;width:17px;height:17px;accent-color:var(--accent);flex:none}
+.table-wrap{overflow-x:auto;margin:6px 0 22px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px solid var(--line)}
+th{background:var(--soft);font-weight:700;font-size:13px}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}
+.pill{display:inline-block;white-space:nowrap;font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;background:var(--soft);color:var(--muted)}
+.pill.rdv,.pill.devis{color:var(--d06)}.pill.signed{color:var(--etherea)}
+blockquote{margin:0 0 16px;padding:12px 16px;border-left:3px solid var(--accent);background:var(--surface)}
+a{color:var(--accent)}
+footer{max-width:1100px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left)) 40px;color:var(--muted);font-size:13px}
+@media print{.hero{background:none;color:#000}nav.toc{display:none}.layout{display:block}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-in">
+    <div class="brands"><span class="brand e">ETHEREA Services</span><span class="brand d">Dépannage 06</span></div>
+    <h1>{{TITLE}}</h1>
+    <div class="byline">Mis à jour le 30 octobre 2026 · Alexandre TORRE</div>
+  </div>
+</header>
+<div class="layout">
+  <nav class="toc" aria-label="Sommaire">
+    <p>Sommaire</p>
+    <ol>
+{{TOC}}
+    </ol>
+  </nav>
+  <main>
+{{BODY}}
+  </main>
+</div>
+<footer>Document interne, réservé à l'équipe commerciale ETHEREA Services et Dépannage 06.</footer>
+</body>
+</html>
